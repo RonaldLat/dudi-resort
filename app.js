@@ -154,6 +154,7 @@ window.addEventListener("DOMContentLoaded", function(e){
 //The functions executioner
 const app = () => {
     carousel();
+    
    // slideShow();
     navSlide();
     // showChefs();
