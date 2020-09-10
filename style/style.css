@@ -872,6 +872,9 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -882,7 +885,6 @@ nav {
 }
 
 .contact .contact-container .contact-form {
-  background: red;
   width: 80%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -921,22 +923,26 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact .contact-container .contact-details div {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: right;
+  text-align: center;
 }
 
 .contact .contact-container .contact-details div span {
@@ -958,6 +964,39 @@ nav {
 
 .contact .contact-container .contact-details div i {
   font-size: 18px;
+}
+
+footer {
+  height: 100px;
+  width: 100%;
+  color: gray;
+  background: black;
+  font-size: 18px;
+}
+
+footer .footer-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-container .social-icons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 * {
