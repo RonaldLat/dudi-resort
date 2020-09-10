@@ -120,6 +120,15 @@ carouselSlide.addEventListener('transitionend', () => {
 
 };
 
+// stage carousel
+window.addEventListener("DOMContentLoaded", function(e){
+    let stage = document.querySelector(".stage");
+    let fadeComplete = function(e){stage.appendChild(arr[0]);};
+    let arr = stage.getElementsByTagName("img");
+    for(let i=0; i<arr.length; i++){
+        arr[i].addEventListener("animationend", fadeComplete, false);
+    }
+}, false);
 
 // let sliderNav = document.querySelectorAll(".slider-nav");
 // sliderNav[0].onclick = function(){
@@ -145,7 +154,7 @@ carouselSlide.addEventListener('transitionend', () => {
 //The functions executioner
 const app = () => {
     carousel();
-
+    slideShow();
     navSlide();
     // showChefs();
     //scr();
