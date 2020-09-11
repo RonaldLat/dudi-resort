@@ -1002,6 +1002,24 @@ img.room-active {
   opacity: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .room-section {
+    height: 80vh;
+  }
+  .room-description {
+    display: none;
+  }
+  .room-preview {
+    width: 100%;
+  }
+  .room-gallery {
+    width: 100%;
+  }
+  .gallery-highlight {
+    width: 100%;
+  }
+}
+
 .contact {
   width: 100%;
   color: #909090;
