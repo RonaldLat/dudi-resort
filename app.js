@@ -172,7 +172,9 @@ function imageGallery(){
 //The functions executioner
 const app = () => {
     carousel();
+
     imageGallery();
+
     navSlide();
 
     // showChefs();
