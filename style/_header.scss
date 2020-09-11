@@ -31,21 +31,7 @@ header {
 
 }
 
-.home {
-    height: 100vh;
-    width: 100%;
-    // background-color: $nav-color;
-    // background-image: url(../images/leafe-close.jpg);
-    // background-size: cover;
-    // background-blend-mode: multiply;
-    background: #ffffff;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-top: calc(8vh + 5px);
-}
+
 
     @keyframes slide {
 
@@ -180,6 +166,11 @@ header {
                 justify-content: space-evenly;
                 align-items: center;
                 color: gray;
+                div:first-child{
+                    text-transform: uppercase;
+                    letter-spacing: 3px;
+                    color: rgb(106, 255, 0);
+                }
                 .fas{
                     color: rgb(6, 138, 6);
                 }
@@ -212,20 +203,9 @@ header {
 
         }
 
-        .location {
-            padding-bottom: 20px;
-            padding-left: 5px;
-            text-align: start;
-            align-self: flex-start;
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-        }
 
-        .welcome-msg {
-            padding-left: 5px;
-            text-align: start;
-        }
+
+
 
 
         .slogan {
@@ -234,3 +214,82 @@ header {
         }
     }
 
+
+.home{
+    width: 100%;
+    // height: 100vh;
+
+    // display: flex;
+    // align-items: center;
+    .welcome-msg{
+        max-width: 80%;
+        margin: 0 auto;
+        position: relative;
+        font-family: sans-serif;
+        font-style: oblique;
+        // &::before{
+        //     content: '"';
+        //     position: absolute;
+        //     top: -10px;
+        //     left: -20px;
+        //     font-size: 28px;
+        // }
+    }
+    .location, .open-hrs{
+        width: 80%;
+        height: 150px;
+        background: transparent;
+        margin: 10px auto;
+        position: relative;
+
+        .loc-bg{
+            height: 100%;
+            width: 100%;
+            background: url('../images/2020-07-28.jpg');
+            background-size: cover;
+            border-radius: 10px;
+
+        }
+        .open-bg{
+            height: 100%;
+            width: 100%;
+            background: url('../images/248B31DA-97D1-4CA0-8303-C93E3A6F2872.jpeg.jpg');
+            background-size: cover;
+            border-radius: 10px;
+
+        }
+        .location-open{
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+    .location-data, .open-data{
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        z-index: 10;
+        border-radius: 10px;
+        z-index: 11;
+        position: absolute;
+        top: 0;
+        color: rgb(233, 233, 233);
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        h3{
+            color: orange;
+        }
+    }
+}
+.home-container{
+    background: rgb(181, 181, 181);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding:10px 20px;
+    width: 100%;
+    height: 95%;
+}

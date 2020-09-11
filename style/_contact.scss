@@ -34,8 +34,11 @@
                     width: 100%;
                     background: rgba(#000, .5);
                     border: none;
+                    border-bottom: 2px solid rgb(113, 113, 113);
+                    border-left: 2px solid rgb(113, 113, 113);
                     height: 25px;
                     padding-left:5px ;
+                    color: rgb(157, 157, 157);
                     
                 }
                 textarea{
@@ -47,7 +50,7 @@
 
                 .btn-send {
                     width: 160px;
-                    background: rgb(2, 193, 8);
+                    background: rgb(221, 155, 31);
                     height: 30px;
                     color:rgb(62, 61, 61);
                     font-size: 16px;
@@ -80,6 +83,8 @@
                 span {
                     display: inline-block;
                     margin-right: 7px;
+                    font-weight: 900;
+                    letter-spacing: 1px;
                     // text-align: right;
                 }
 
@@ -105,7 +110,7 @@
 }
 
 footer {
-    height: 100px;
+    height: 70px;
     width: 100%;
     color: gray;
     // color: transparent;
@@ -119,7 +124,7 @@ footer {
         justify-content: space-around;
         align-items: center;
         .copyrights{
-            font-size: 14px;
+            font-size: 12px;
         }
 
         .social-icons {
