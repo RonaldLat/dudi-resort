@@ -943,6 +943,7 @@ nav {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
+  overflow: hidden;
 }
 
 .room-gallery {
