@@ -152,6 +152,85 @@ window.addEventListener("DOMContentLoaded", function(e){
 
 //image gallery
 
+// food menu
+let menuShow = ()=>{
+    let dinnerBtn= document.querySelector('.dinner-btn');
+    let lunchBtn= document.querySelector('.lunch-btn');
+    let breakfastBtn= document.querySelector('.breakfast-btn');
+    let todaysSpecialBtn= document.querySelector('.todays-special-btn');
+
+    let dinnerDiv = document.querySelector('.dinner');
+    let lunchDiv = document.querySelector('.lunch');
+    let breakfastDiv = document.querySelector('.breakfast');
+    let todaysSpecial = document.querySelector('.todays-special');
+
+        // todaysSpecial.classList.toggle('menu-active');
+    todaysSpecial.classList.add('menu-active');
+    todaysSpecialBtn.classList.add('btn-active');
+
+
+    todaysSpecialBtn.addEventListener('click', ()=>{
+        dinnerDiv.classList.remove('menu-active');
+        lunchDiv.classList.remove('menu-active');
+        breakfastDiv.classList.remove('menu-active');
+
+        dinnerBtn.classList.remove('btn-active');
+        lunchBtn.classList.remove('btn-active');
+        breakfastBtn.classList.remove('btn-active');
+        
+        todaysSpecial.classList.add('menu-active');
+        todaysSpecialBtn.classList.add('btn-active');
+
+
+    });
+
+    dinnerBtn.addEventListener('click', ()=>{
+        lunchDiv.classList.remove('menu-active');
+        breakfastDiv.classList.remove('menu-active');
+        todaysSpecial.classList.remove('menu-active');
+
+        lunchBtn.classList.remove('btn-active');
+        breakfastBtn.classList.remove('btn-active');
+        todaysSpecialBtn.classList.remove('btn-active');
+
+
+        dinnerDiv.classList.toggle('menu-active');
+        dinnerBtn.classList.toggle('btn-active');
+
+        
+    });
+    lunchBtn.addEventListener('click', ()=>{
+        dinnerDiv.classList.remove('menu-active');
+        breakfastDiv.classList.remove('menu-active');
+        todaysSpecial.classList.remove('menu-active');
+
+        dinnerBtn.classList.remove('btn-active');
+        breakfastBtn.classList.remove('btn-active');
+        todaysSpecialBtn.classList.remove('btn-active');
+
+
+
+        lunchDiv.classList.toggle('menu-active');
+        lunchBtn.classList.toggle('btn-active');
+
+    });
+    breakfastBtn.addEventListener('click', ()=>{
+        dinnerDiv.classList.remove('menu-active');
+        lunchDiv.classList.remove('menu-active');
+        todaysSpecial.classList.remove('menu-active');
+
+        dinnerBtn.classList.remove('btn-active');
+        lunchBtn.classList.remove('btn-active');
+        todaysSpecialBtn.classList.remove('btn-active');
+
+        breakfastDiv.classList.toggle('menu-active');
+        breakfastBtn.classList.toggle('btn-active');
+
+    });
+
+
+};
+
 
 function imageGallery(){
     const highlight = document.querySelector('.gallery-highlight');
@@ -174,7 +253,7 @@ const app = () => {
     carousel();
 
     imageGallery();
-
+    menuShow();
     navSlide();
 
     // showChefs();

@@ -227,6 +227,10 @@ header {
         position: relative;
         font-family: sans-serif;
         font-style: oblique;
+        &::first-letter{
+            font-size: 50px;
+            font-family: cursive;
+        }
         // &::before{
         //     content: '"';
         //     position: absolute;

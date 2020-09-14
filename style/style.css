@@ -301,6 +301,114 @@
   transition: opacity 0.4s ease-in;
 }
 
+.food-menu {
+  position: relative;
+}
+
+.food-menu-container {
+  background: radial-gradient(#4a4949, black);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+}
+
+.todays-special, .dinner, .lunch, .breakfast {
+  height: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.todays-special h3, .dinner h3, .lunch h3, .breakfast h3 {
+  background: red;
+}
+
+.todays-special ul, .dinner ul, .lunch ul, .breakfast ul {
+  margin: 0 15px;
+}
+
+.menu-active {
+  opacity: 1;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  height: 60vh;
+}
+
+.food-menu-nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+  z-index: 1000;
+}
+
+.food-menu-nav button {
+  color: gray;
+  font-size: 15px;
+  padding: 5px 8px;
+  border: none;
+  outline: none;
+  z-index: 1000;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.btn-active {
+  background: orange;
+  color: #404040;
+}
+
+.dinner li, .lunch li, .breakfast li, .todays-special li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.item {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.price {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+li::after {
+  content: "";
+  border-bottom: 1px dotted;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
 @media screen and (min-width: 768px) {
   .chefs {
     height: 600px;
@@ -554,6 +662,11 @@ header {
   position: relative;
   font-family: sans-serif;
   font-style: oblique;
+}
+
+.home .welcome-msg::first-letter {
+  font-size: 50px;
+  font-family: cursive;
 }
 
 .home .location, .home .open-hrs {
@@ -824,6 +937,8 @@ nav {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .carousel-container {
@@ -844,6 +959,7 @@ nav {
 
 .gallery-container {
   position: relative;
+  width: 100%;
 }
 
 .gallery-nav {
@@ -943,6 +1059,7 @@ nav {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
+  overflow: hidden;
 }
 
 .room-gallery {
@@ -1023,6 +1140,7 @@ img.room-active {
 .contact {
   width: 100%;
   color: #909090;
+  position: relative;
 }
 
 .contact .contact-container {

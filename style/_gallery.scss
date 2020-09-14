@@ -7,6 +7,8 @@
     img{
         width: 100%;
         box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
 }
 .carousel-container{
@@ -26,6 +28,7 @@
 }
 .gallery-container{
     position: relative;
+    width: 100%;
 }
 .gallery-nav {
     display: flex;
@@ -104,6 +107,7 @@
 .room-section{
     display: flex;
     height: 100vh;
+    overflow: hidden;
 }
 .room-gallery{
     width: 50%;
