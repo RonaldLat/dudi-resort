@@ -1011,6 +1011,7 @@ header {
 
 .home {
   width: 100%;
+  height:fit-content;
 }
 
 .home .h3-subheadings {
