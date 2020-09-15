@@ -7,7 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     border: 2px solid $services-theme;
-    
+
 
 }
 
@@ -17,6 +17,10 @@
     align-items: center;
     justify-content: space-around;
     padding: 5px;
+    color: rgb(174, 174, 174);
+    h3{
+        color: rgb(196, 196, 196);
+    }
 }
 
 .col {
@@ -66,7 +70,7 @@
         height: 3ch;
         margin: 0 auto;
         letter-spacing: 2px;
-        padding:0 1ch ;
+        padding: 0 1ch;
         background-color: orange;
         color: white;
         font-weight: bold;
@@ -161,32 +165,37 @@
 //             color: red;
 //             // transform: translateX(-50px);
 //         }
-    
+
 //     }
 // }
 
 //testimonials section
 /* Slideshow container */
+.testimonials {
+    background: radial-gradient(at top left, #71553a, rgb(27, 27, 26));
+}
+
 .testimonials-container {
     height: 230px;
     width: 100%;
     margin-bottom: 30px;
     position: relative;
-  }
-  
-  /* Hide the images by default */
-  .review-card{
+}
+
+/* Hide the images by default */
+.review-card {
     // display: none;
     height: 230px;
     width: 90%;
     max-width: 400px;
     margin: 10px auto;
     // background: radial-gradient(rgb(96, 96, 96), black);
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 4px;
 
     position: relative;
-    .avatar{
+
+    .avatar {
         // background: rgb(76, 74, 74);
         width: 56px;
         height: 56px;
@@ -196,17 +205,20 @@
         position: absolute;
         top: 10px;
         left: 20px;
+        object-fit: cover;
 
-
-        img{
+        img {
             width: 40px;
             height: 40px;
             border-radius: 50%;
             filter: grayscale(100%);
             overflow: hidden;
             // margin: 2px;
+            object-fit: cover;
+
         }
-        .half-circle{
+
+        .half-circle {
             stroke: #ff8a00;
             stroke-width: 8;
             fill: none;
@@ -222,7 +234,8 @@
 
         }
     }
-    .review-data{
+
+    .review-data {
         width: 98%;
         height: 160px;
         position: absolute;
@@ -235,22 +248,26 @@
         padding: 5px;
         align-items: flex-start;
         text-align: left;
-        .reviewer{
+
+        .reviewer {
             font-size: 1.2em;
             letter-spacing: 2px;
             font-weight: 600;
         }
-        .review-date{
+
+        .review-date {
             border-bottom: dotted 1px orange;
         }
-        .review-message{
+
+        .review-message {
             color: rgb(127, 124, 124);
         }
     }
-  }
-  
-  /* Next & previous buttons */
-  .test-prev, .test-next {
+}
+
+/* Next & previous buttons */
+.test-prev,
+.test-next {
     cursor: pointer;
     position: absolute;
     left: 50%;
@@ -264,27 +281,29 @@
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .test-next {
+}
+
+/* Position the "next button" to the right */
+.test-next {
     // right: 0;
     // color: rebeccapurple;
     margin-left: 30px;
     border-radius: 3px 0 0 3px;
-  }
-  .test-prev{
-      margin-left: -30px;
+}
+
+.test-prev {
+    margin-left: -30px;
     //   color: #000;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .test-prev:hover, .test-next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  /* Caption text */
-  .text {
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.test-prev:hover,
+.test-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
     color: #110909;
     font-size: 15px;
     padding: 8px 12px;
@@ -292,19 +311,19 @@
     bottom: 8px;
     width: 100%;
     text-align: center;
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
     color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
     top: 0;
-  }
-  
-  /* The dots/bullets/indicators */
-  .dot {
+}
+
+/* The dots/bullets/indicators */
+.dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -313,26 +332,129 @@
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
+}
+
+.active,
+.dot:hover {
     background-color: #717171;
-  }
-  
-  /* Fading animation */
-  .fade {
+}
+
+/* Fading animation */
+.fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
-  }
-  
-  @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+//comments section
+.comments-container {
+    // background: rgb(2, 81, 83);
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3{
+        // background: #222;
+        padding: 5px;
+        align-self: flex-start;
+        color: rgb(245, 174, 42);
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        div {
+            margin-top: 5px;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 100%;
+
+            input, textarea, button {
+                border-radius: 5px;
+                width: 70%;
+                border: none;
+                background: #140d05;
+                height: 22px;
+                box-sizing: border-box;
+                color: rgb(179, 179, 179);
+                outline-color: orange;
+                padding: 0 5px;
+                transition: all 0.4s ease-in-out;
+                &::placeholder{
+                    color: rgb(72, 58, 31);
+                    font-size: 14px;
+                }
+                &:hover{
+                    width: 100%;
+                    &::placeholder{
+                        color: rgb(255, 197, 90);
+                    }
+                }
+
+            }
+            textarea{
+                height: 60px;
+            }
+            &:last-child{
+                width: 50%;
+                height: 25px;
+                align-self: flex-start;
+                button{
+                    color: rgb(71, 71, 71);
+                    // padding: 2px 15px;
+                    text-align: center;
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 800;
+                    // background: #ff8a00;
+                    background: linear-gradient(right,orange, orangered);
+                    font-size: 14px;
+                    transition: all 0.4s ease-in-out;
+                    outline: none;
+
+
+                    &:hover{
+                        width: 95%;
+
+
+                    }
+
+
+                }
+            }
+        }
+
+
+    }
+}

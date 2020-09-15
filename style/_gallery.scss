@@ -73,11 +73,12 @@
         background: #fff;
         width: 100%;
         height: 100%;
+        object-fit: cover;
     }
 }
 .stage img:nth-of-type(1){
     animation-name: fader;
-    animation-delay: 10s;
+    animation-delay: 4s;
     animation-duration: 1.5s;
     z-index: 20;
 }
@@ -88,7 +89,7 @@
     display: none;
 }
 .longer:nth-of-type(1){
-    animation-delay: 10s;
+    animation-delay: 4s;
 }
 @keyframes fader{
     from{
@@ -106,8 +107,12 @@
 
 .room-section{
     display: flex;
-    height: 100vh;
+    height: 50vh;
+    // height: auto;
     overflow: hidden;
+    // position: relative;
+    margin-top: 0;
+    // background: chartreuse;
 }
 .room-gallery{
     width: 50%;
@@ -132,18 +137,25 @@
 }
 .room-preview img{
     height: 100px;
+    width: 25%;
     flex-grow: 1;
-    opacity: 0.6;
+    object-fit: cover;
+    // opacity: 0.6;
+    filter: grayscale(100%);
     border-left: 2px solid #e2d2c0;
     cursor: pointer;
 }
 img.room-active{
-    opacity: 1;
+    // opacity: 1;
+    filter: grayscale(0%);
 }
 
 @media screen and (max-width: 768px){
     .room-section{
-        height: 80vh;
+        // height: 80vh;
+        h3{
+            display: block;
+        }
     }
     .room-description{
         display: none;
