@@ -128,9 +128,211 @@
     }
 }
 
-.testimonials{
-    height: 70vh;
-}
+// .testimonials{
+//     height: 70vh;
+//     width: 100%;
+//     margin-bottom: 30px;
+
+// }
+// .testimonials-container{
+//     width: 100%;
+//     // height: 200px;
+//     background: rgb(187, 187, 186);
 
 
+// }
 
+// .reviews{
+//     width: 80%;
+//     height: 100%;
+//     overflow: scroll;
+//     display: flex;
+//     flex-direction: row;
+//     background: rgb(250, 81, 81);
+//     overflow: hidden;
+//     .rev{
+//         height: 200px;
+//         min-width: 300px;
+//         background: yellow;
+//         border: 2px solid black;
+//         margin: 10px;
+//         transition: all 0.4s ease-in;
+//         &:nth-child(1){
+//             color: red;
+//             // transform: translateX(-50px);
+//         }
+    
+//     }
+// }
+
+//testimonials section
+/* Slideshow container */
+.testimonials-container {
+    height: 230px;
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .review-card{
+    // display: none;
+    height: 230px;
+    width: 90%;
+    max-width: 400px;
+    margin: 10px auto;
+    // background: radial-gradient(rgb(96, 96, 96), black);
+    background: rgba(0,0,0,0.8);
+    border-radius: 4px;
+
+    position: relative;
+    .avatar{
+        // background: rgb(76, 74, 74);
+        width: 56px;
+        height: 56px;
+        // margin: 20px;
+        // margin-top: 40px;
+        position: relative;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+
+
+        img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            filter: grayscale(100%);
+            overflow: hidden;
+            // margin: 2px;
+        }
+        .half-circle{
+            stroke: #ff8a00;
+            stroke-width: 8;
+            fill: none;
+            width: 48px;
+            height: 48px;
+            stroke-linecap: round;
+            position: absolute;
+            bottom: 0;
+            left: -50%;
+            transform: translateX(50%);
+
+            // left: 0;
+
+        }
+    }
+    .review-data{
+        width: 98%;
+        height: 160px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 5px;
+        align-items: flex-start;
+        text-align: left;
+        .reviewer{
+            font-size: 1.2em;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        .review-date{
+            border-bottom: dotted 1px orange;
+        }
+        .review-message{
+            color: rgb(127, 124, 124);
+        }
+    }
+  }
+  
+  /* Next & previous buttons */
+  .test-prev, .test-next {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .test-next {
+    // right: 0;
+    // color: rebeccapurple;
+    margin-left: 30px;
+    border-radius: 3px 0 0 3px;
+  }
+  .test-prev{
+      margin-left: -30px;
+    //   color: #000;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .test-prev:hover, .test-next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #110909;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }

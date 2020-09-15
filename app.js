@@ -68,7 +68,7 @@ const navSlide = () => {
 
 //Vanilla javascript image carousel
 let carousel = ()=>{
-    const carouselSlide = document.querySelector(".carousel-slide");
+const carouselSlide = document.querySelector(".carousel-slide");
 const carouselImages = document.querySelectorAll(".carousel-slide img");
 
 //Buttons
@@ -248,12 +248,84 @@ function imageGallery(){
     })
 };
 
+let reviewSlide = ()=>{
+    let nextRev = document.querySelector('.next-rev');
+    let prevRev = document.querySelector('.prev-rev');
+
+    let reviewsContainer = document.querySelector('.reviews');
+    let reviews =  document.querySelectorAll('.rev');
+    revOffset = -300;
+    let counter=1;
+    nextRev.addEventListener('click', function(){
+        reviews[0].style.background= 'blue';
+        reviews.forEach(rev => {
+        rev.style.transform=`translateX(${revOffset}px)`;
+            
+        });
+        
+        if(counter>=reviews.length){
+            return
+        }
+        revOffset+=-300;
+        counter++;
+    })
+    //previous review
+    prevRev.addEventListener('click', function(){
+        reviews[0].style.background= 'blue';
+        revOffset =300;
+        reviews.forEach(rev => {
+        rev.style.transform=`translateX(${revOffset}px)`;
+            
+        });
+        
+        if(counter>=reviews.length){
+            return
+        }
+        revOffset-=300;
+        counter++;
+    })
+}
+
+//testimonials
+
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail review controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("review-card");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+
+
 //The functions executioner
 const app = () => {
     carousel();
 
     imageGallery();
     menuShow();
+    // reviewSlide();
     navSlide();
 
     // showChefs();
