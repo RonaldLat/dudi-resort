@@ -257,3 +257,17 @@ li::after{
         height: 600px;
     }
 }
+//for screens larger than 768px
+@media screen and (min-width: 768px){
+    .food-menu{
+        width: 80%;
+    }
+    .chefs{
+        width: 90%;
+    }
+    .food-menu-container{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+}

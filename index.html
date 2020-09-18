@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 
 <head>
   <meta charset="UTF-8" />
@@ -13,6 +14,7 @@
 </head>
 
 <header>
+  
   <div class="header-bg">
     <div class="stage">
       <img src="./hotelImages/night-hotel.jpg" alt="" class="longer">
@@ -25,10 +27,12 @@
   </div>
   <nav>
     <div class="logo">
-      <div>
-        <h2>Dudi <br>
-        Resort</h2>
-      </div>
+      <a href="#">
+        <div>
+          <h2>Dudi <br>
+          Resort</h2>
+        </div>
+      </a>
     </div>
 
     <ul class="nav-links">
@@ -42,6 +46,9 @@
         <a href="#gallery">Gallery</a>
       </li>
       <li>
+        <a href="#food-menu"> Menu</a>
+      </li>
+      <li>
         <a href="#contact">Contact Us</a>
       </li>
     </ul>
@@ -53,12 +60,13 @@
     </div>
   </nav>
   <div class="slogan">
-    <img src="./images/resort-logo.png" alt="">
+    <!-- <img src="./images/resort-logo.png" alt=""> -->
     <!-- <h2>Dudi Resort</h2> -->
   </div>
 </header>
 
 <body>
+
   <div class="cta">
     <!-- open hours information -->
     <div class="slash"></div>
@@ -125,7 +133,7 @@
 
         <!-- Rooms tour -->
         <div class="room-description">
-          <h1>Rooms</h1>
+          <p id="rooms-head">Rooms</p>
           <p>Enjoy this experience</p>
         </div>
         <div class="room-gallery">
@@ -284,7 +292,7 @@
       </div>
     </section>
 
-    <section class="food-menu">
+    <section class="food-menu" id="food-menu">
       <h2 class="section-h2">Menu</h2>
       <div class="food-menu-container">
 
@@ -505,14 +513,14 @@
           <div><input type="text" placeholder="Your Email"></div>
           
           <div><textarea placeholder="New comment!"></textarea></div>
-          <div><button>Post Comment</button></div>
+          <div><button class="comment-btnn">Post Comment</button></div>
         </form>
       </div>
 
     </section>
 
     <!-- contact section -->
-    <section class="contact">
+    <section class="contact" id="contact">
       <h2 class="section-h2">Contact Us</h2>
       <div class="contact-container">
         <div class="contact-form">

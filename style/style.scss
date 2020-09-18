@@ -19,12 +19,16 @@
     
 }
 
+
 body{
     width: 100%;
+    height: 700vh;
     box-sizing: border-box;
     padding: 0;
     margin: 0 ;
     // overflow-x: hidden;
+    // position: relative;
+
     background-color: $main-bg;
     height: auto;
     main{
@@ -61,6 +65,7 @@ section{
 
 .section-h2{
     color: orange;
+
     margin-left: 15px;
     margin-bottom: 5px;
     font-weight: normal;
@@ -76,6 +81,42 @@ section{
         background: linear-gradient( left, orange, #71553a);
     }
 }
+// #scrollpath{
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     width: 10px;
+//     height: 100px;
+//     background: rgba(#fff, .5);
+// }
+// #progressbar{
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     width: 10px;
+//     height: 100%;
+//     background: linear-gradient(to top, #008aff, #00ffe7);
+// }
+::-webkit-scrollbar{
+    width: 10px;
+    background: rgb(114, 74, 0);
+    // box-shadow: inset 0 0 5px rgb(71, 21, 2);
+}
+::-webkit-scrollbar-thumb{
+    width: 5px;
+    height: 5px;
+    border-radius: 10px;;
+    background: #d38842;
 
-
-
+}
+::-webkit-scrollbar-track{
+    color: violet;
+    width: 5px;
+    height: 5px;
+}
+.home .h3-subheadings {
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin: 20px;
+    font-weight: 400;
+  }

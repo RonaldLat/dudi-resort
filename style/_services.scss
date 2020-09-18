@@ -173,6 +173,7 @@
 /* Slideshow container */
 .testimonials {
     background: radial-gradient(at top left, #71553a, rgb(27, 27, 26));
+    width: 90%;
 }
 
 .testimonials-container {
@@ -460,4 +461,44 @@
 
 
     }
+}
+
+//for screens larger than 768px
+@media screen and (min-width: 768px){
+
+.comments-container{
+    form{
+        width: 100%;
+
+        div{
+            width: 100%;
+            input, textarea{
+                width: 400px;
+                height: 40px;
+                &:hover{
+                    width: 420px;
+                    transition: all 0.4s ease-in-out;
+
+                }
+            }
+            textarea{
+                height: 300px;
+            }
+
+            &:last-child{
+                .comment-btnn{
+                    height: 40px;
+                    width: 200px;
+                }
+
+            }
+
+        }
+
+
+    }
+
+}
+
+
 }

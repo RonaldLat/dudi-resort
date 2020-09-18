@@ -128,6 +128,10 @@
     justify-content: center;
     align-items: center;
     background: #e2d2c0;
+    font-weight: 100;
+    #rooms-head{
+        font-size: 20px;
+    }
 
 }
 .room-preview{
@@ -170,4 +174,20 @@ img.room-active{
         width: 100%;
         // padding-bottom: 5px;
     }
+}
+//for screens larger than 768px
+@media screen and (min-width: 768px){
+    .gallery{
+        width: 90%;
+    }
+    .gallery-container{
+        width: 80%;
+        margin: 0 auto;
+        // height: 700px;
+        padding-bottom:20px ;
+        img{
+            height: 700px;
+        }
+    }
+
 }
